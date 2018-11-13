@@ -1,13 +1,15 @@
 {
     "compilerOptions": {
+        "lib": ["es6"],
+        "types": ["node"],
+        "target": "es6",
         "outDir": "./build",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "allowJs": true,
-        "target": "es5",
-        "lib": [
-            "es2015"
-        ],
+        "emitDecoratorMetadata":true,
+        "pretty": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "allowSyntheticDefaultImports": true,
         "sourceMap": true
     },
     "include": [
@@ -15,7 +17,6 @@
     ],
     "exclude": [
         "build",
-        "dist",
         "node_modules"
     ]
 }

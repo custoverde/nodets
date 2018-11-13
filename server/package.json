@@ -6,7 +6,8 @@
   "scripts": {
     "docker-build": "docker build -t confmr.azurecr.io/javascript-conference-2017-typescript-live:latest .",
     "docker-push": "docker push -t confmr.azurecr.io/javascript-conference-2017-typescript-live",
-    "build": "rimraf build && tsc",
+    "build": "tsc",
+    "build-start": "tsc && node build/index.js",
     "start-server": "node build/index.js",
     "start": "nodemon --exec ts-node src/index.ts",
     "debug": "nodemon --watch src/**/* -e ts,json --exec node --inspect-brk -r ts-node/register src/index.ts",
@@ -21,6 +22,7 @@
   "dependencies": {
     "@types/es6-promise": "^3.3.0",
     "@types/restify": "^7.2.5",
+    "dotenv": "^6.1.0",
     "nodemon": "^1.18.4",
     "npx": "^10.2.0",
     "pg": "^7.5.0",
