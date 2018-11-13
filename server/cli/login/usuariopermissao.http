@@ -1,0 +1,28 @@
+GET http://localhost:8080/login/usuariosPermissoes
+
+GET http://localhost:8080/login/usuarioPermissao/1
+
+
+GET http://localhost:8080/login/usuarioPermissao/1/1
+
+
+POST http://localhost:8080/login/usuarioPermissao
+content-type: application/json
+
+{
+  "idUsuario": 1,
+  "idPermissao": 1,
+  "tipo": ["P", "Z"]
+}
+
+PUT http://localhost:8080/login/usuarioPermissao
+content-type: application/json
+
+{
+  "idUsuario": 1,
+  "idPermissao": 1,
+  "tipo": ["P", "E", "Z"]
+}
+
+DELETE http://localhost:8080/login/usuarioPermissao/1/1
+

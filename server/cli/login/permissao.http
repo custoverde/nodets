@@ -1,0 +1,43 @@
+GET http://localhost:8080/login/permissoes
+
+GET http://localhost:8080/login/permissao/3
+
+
+POST http://localhost:8080/login/permissao
+content-type: application/json
+
+{
+  "aplicacao": {
+    "idAplicacao": 1
+  },
+  "titulo": "Permissao Geral",
+  "descricao": "Permissao Geral",
+  "ativa": true
+}
+
+POST http://localhost:8080/login/permissao
+content-type: application/json
+
+{
+  "aplicacao": {
+    "idAplicacao": 1
+  },
+  "permissaoPai": {
+    "idPermissao": 1
+  },
+  "titulo": "Permissao Filho",
+  "descricao": "Permissao Filho",
+  "ativa": true
+}
+
+PUT http://localhost:8080/login/permissao/2
+content-type: application/json
+
+{
+  "cnpjCpf": "07426400433",
+  "dataCadastro": "2018-08-01 00:00:00",
+  "validoAte": "2028-08-01 00:00:00"
+}
+
+
+DELETE  http://localhost:8080/login/permissao/2

@@ -1,0 +1,14 @@
+GET http://localhost:8080/login/usuariosPerfis
+
+GET http://localhost:8080/login/usuarioPerfil/1
+
+GET http://localhost:8080/login/usuarioPerfil/1/1
+
+
+POST http://localhost:8080/login/usuarioPerfil
+content-type: application/json
+
+{
+  "idUsuario": 1,
+  "idPerfil": 1
+}

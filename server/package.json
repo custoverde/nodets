@@ -1,0 +1,33 @@
+{
+  "name": "nodets",
+  "version": "1.0.0",
+  "description": "learning",
+  "main": "index.js",
+  "scripts": {
+    "docker-build": "docker build -t confmr.azurecr.io/javascript-conference-2017-typescript-live:latest .",
+    "docker-push": "docker push -t confmr.azurecr.io/javascript-conference-2017-typescript-live",
+    "build": "rimraf build && tsc",
+    "start-server": "node build/index.js",
+    "start": "nodemon --exec ts-node src/index.ts",
+    "debug": "nodemon --watch src/**/* -e ts,json --exec node --inspect-brk -r ts-node/register src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration-run": "ts-node .\\node_modules\\typeorm\\cli.js migration:run",
+    "migration-revert": "ts-node .\\node_modules\\typeorm\\cli.js migration:revert",
+    "migration-create": "./node_modules/.bin/typeorm migration:create -n <<Nome do Migration>>",
+    "migration-create2": " .\\node_modules\\.bin\\typeorm migration:create -n  <<Nome do Migration>>"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/restify": "^7.2.5",
+    "nodemon": "^1.18.4",
+    "npx": "^10.2.0",
+    "pg": "^7.5.0",
+    "restify": "^7.2.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "typeorm": "^0.2.7",
+    "typescript": "^3.1.1"
+  }
+}

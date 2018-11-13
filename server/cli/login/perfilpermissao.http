@@ -1,0 +1,26 @@
+GET http://localhost:8080/login/perfisPermissoes
+
+GET http://localhost:8080/login/perfilPermissao/1
+
+
+GET http://localhost:8080/login/perfilPermissao/1/1
+
+
+POST http://localhost:8080/login/perfilPermissao
+content-type: application/json
+
+{
+  "idPerfil": 1,
+  "idPermissao": 1,
+  "tipo": ["P", "Z"]
+}
+
+PUT http://localhost:8080/login/perfilPermissao
+content-type: application/json
+
+{
+  "idPerfil": 1,
+  "idPermissao": 1,
+  "tipo": ["P", "E", "Z"]
+}
+

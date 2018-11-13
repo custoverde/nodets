@@ -1,0 +1,21 @@
+GET http://localhost:8080/login/usuarios
+
+POST http://localhost:8080/login/usuario
+content-type: application/json
+
+{
+  "licenca": {
+    "idLicenca": 1
+  },
+  "nome": "Eric",
+  "departamento": "CTO",
+  "email": "ericpachecos@gmail.com",
+  "nomeAcesso": "eric",
+  "senha": "12345678",
+  "dataExpiraSenha": "2018-12-31",
+  "dataCadastro": "2018-11-03",
+  "ativo": true,
+  "forcaSenha": 100,
+  "tipoUsuario": "U",
+  "dataNascimento": "1996-12-04"
+}

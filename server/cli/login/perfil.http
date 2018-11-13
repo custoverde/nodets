@@ -1,0 +1,24 @@
+GET http://localhost:8080/login/perfis
+
+GET http://localhost:8080/login/perfil/1
+
+
+POST http://localhost:8080/login/perfil
+content-type: application/json
+
+{
+  "titulo": "Administrador",
+  "descricao": "Administra o Sistema",
+  "aplicacao": {
+    "idAplicacao": 1
+  }
+}
+
+PUT http://localhost:8080/login/perfil/2
+content-type: application/json
+
+{
+  "cnpjCpf": "07426400433",
+  "dataCadastro": "2018-08-01 00:00:00",
+  "validoAte": "2028-08-01 00:00:00"
+}

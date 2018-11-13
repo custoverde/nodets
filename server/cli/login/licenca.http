@@ -1,0 +1,22 @@
+GET http://localhost:8080/login/licencas
+
+GET http://localhost:8080/login/licenca/3
+
+
+POST http://localhost:8080/login/licenca
+content-type: application/json
+
+{
+  "cnpjCpf": "07426400433",
+  "dataCadastro": "2018-08-01 00:00:00",
+  "validoAte": "2028-08-01 00:00:00"
+}
+
+PUT http://localhost:8080/login/licenca/2
+content-type: application/json
+
+{
+  "cnpjCpf": "07426400433",
+  "dataCadastro": "2018-08-01 00:00:00",
+  "validoAte": "2028-08-01 00:00:00"
+}
