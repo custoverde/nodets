@@ -1,7 +1,7 @@
-import { Controller } from '../Controller';
+import { Controller } from '../controller';
 import { HttpServer } from '../../server/HttpServer';
 import { Request, Response } from 'restify';
-import { licencaService } from '../../services/login/licencaService';
+import { licencaService } from '../../services/login/LicencaService';
 import { Code } from 'typeorm';
 
 export class LicencaController implements Controller {
